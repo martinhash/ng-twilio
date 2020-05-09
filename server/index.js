@@ -25,14 +25,14 @@ const app = express();
 
 // Set up the path for the quickstart.
 const quickstartPath = path.join(__dirname, '../src');
-app.use('/quickstart', express.static(quickstartPath));
+app.use('/', express.static(quickstartPath));
 
 
 /**
  * Default to the Quick Start application.
  */
 app.get('/', (request, response) => {
-  response.redirect('/quickstart');
+  response.redirect('/');
 });
 
 /**
@@ -65,7 +65,7 @@ app.get('/token', function(request, response) {
 
 // Create http server and run it.
 const server = http.createServer(app);
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 server.listen(port, function() {
   console.log('Express server running on *:' + port);
 });
