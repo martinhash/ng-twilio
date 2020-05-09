@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "build": "npm-run-all build:*",
-    "build:quickstart": "browserify src/twilio/index.js > src/index.js",
+    "build:quickstart": "browserify src/twilio/index.js > src/assets/js/twilio/index.js",
     "clean": "npm-run-all clean:*",
-    "clean:quickstart": "rimraf src/index.js",
-    "start": "npm run clean && npm run build && node server"
+    "clean:quickstart": "rimraf src/assets/js/twilio/index.js",
+    "start": "npm run clean && npm run build && node server" 
   },
   "private": true,
   "dependencies": {
